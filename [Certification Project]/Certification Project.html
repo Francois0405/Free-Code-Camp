@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+
+  <body>
+<!--INTRO-->
+    <div class="container">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form to help us improve</p>
+    <form method="post" action='https://register-demo.freecodecamp.org' id="survey-form">
+<!--Name, Email, Age-->
+     <fieldset>
+      <label id="name-label">
+        <p>Name <span class="required">*</span></p>
+        <input placeholder="Enter your name" required id="name" type="text"></input>
+      </label>
+      <label id="email-label">
+        <p>Email <span class="required">*</span></p>
+        <input placeholder="Enter your email" required id="email" type="email"></input>
+      </label>
+      <label id="number-label">
+        <p>Age (optional)</p>
+        <input placeholder="Age" id="number" type="number" min="13" max="99"></input>
+      </label>
+     </fieldset>
+<!--Ocupation (select)-->
+     <fieldset>
+      <p>What is your current ocupation? <span class="required">*</span></p></p>
+      <select required id="dropdown">
+        <option value="">- Select your current ocupation -</option>
+        <option value="1">Student</option>
+        <option value="2">Freelancer</option>
+        <option value="3">Web Designer</option>
+        <option value="4">Programmer</option>
+      </select>
+    </fieldset>
+<!--Satisfaction (radio)-->
+    <fieldset><p>Are you satisfied with freeCodeCamp? <span class="required">*</span></p>
+      <label for="Yes"><input id="Yes" type="radio" name="radio" value="1">Yes, I am.</input></label>
+      <label for="No"><input type="radio" id="No" name="radio" value="2">No, I am not.</input></label>
+      <p>Could you please tell us more about your experience with us? (optional)</p>
+      <label>
+        <textarea placeholder="Tell us more here..."></textarea>
+      </label>
+    </fieldset>
+<!--What do you want to be improved (checkbox)-->
+    <fieldset>
+      <p>What would you like to see improved? (Check all that apply)</p>
+  
+      <label for="Overall-experience">
+        <input id="Overall-experience" value="Overall-experience" class="checkbox" type="checkbox"> Overall experience
+      </label>
+
+      <label for="Project-experience">
+        <input id="Project-experience" value="Project-experience" class="checkbox" type="checkbox"> Project experience
+      </label>
+
+      <label for="Data-projects">
+        <input id="Data-projects" value="Data-projects" class="checkbox" type="checkbox"> Data projects
+      </label>
+
+      <label for="Server-sided-projects">
+        <input id="Server-sided-projects" value="Server-sided-projects" class="checkbox" type="checkbox"> Server-sided projects
+      </label>
+
+      <label for="Programming-console">
+        <input id="Programming-console" value="Programming-console" class="checkbox" type="checkbox"> Programming console
+      </label>
+
+      <label for="Community-forum">
+        <input id="Community-forum" value="Community-forum" class="checkbox" type="checkbox"> Community forum
+      </label>
+
+      <label for="Wiki">
+        <input id="Wiki" value="Wiki" class="checkbox" type="checkbox"> Wiki
+      </label>
+
+      <label for="Videos">
+        <input id="Videos" value="Videos" class="checkbox" type="checkbox"> Videos
+      </label>
+
+      <label>
+        <p>Any additional comments or suggestions?</p>
+        <textarea placeholder="Enter your comment here..."></textarea>
+      </label>
+    </fieldset>
+
+      <label for="terms-and-conditions">
+        <input value="terms-and-conditions" class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions"></input> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a>.
+       <input type="submit" value="Submit" id="submit"></input>  
+    </form>
+    </div>
+  </body>
+    
+</html>
